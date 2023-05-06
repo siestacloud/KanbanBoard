@@ -40,15 +40,12 @@ body {
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    font-family: $fontfamily;
 
 }
 
 input,
 button,
-textarea {
-    font-family: $fontfamily;
-}
+
 
 input::-ms-clear {
     display: none;
@@ -94,4 +91,7 @@ h5,
 h6 {
      font-size: inherit;
     font-weight: inherit; 
+}
+* {
+  scroll-behavior: smooth;
 }

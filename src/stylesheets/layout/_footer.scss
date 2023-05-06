@@ -3,8 +3,35 @@
 .footer {
   grid-area: footer;
   display: grid;
-  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1652px) minmax(15px, 1fr);
-  background-color: $dark;
+  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1240px) minmax(15px, 1fr);
+  background-color: $blue-dark;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 33px;
+  color: $light;
+
+  &__row {
+    grid-area: 1/2;
+    margin: 10px;
+    @include f(space-between, center, row);
+  }
+
+  &__state {
+    @include f(space-between, center, row);
+    gap: 10px;
+  }
+
+  @media (max-width: 867px) {
+    &__row {
+      @include f(space-between, center, column);
+    }
+
+    &__state {
+      @include f(space-between, center, column);
+      gap: 0px;
+    }
+  }
 
 }
+
 // </ПОДВАЛ САЙТА>

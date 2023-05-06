@@ -1,0 +1,89 @@
+.dropdown {
+  position: relative;
+  // при наведении выпадает меню
+  &__link {
+    
+    display: flex;
+  }
+
+  &__avatar{
+    background-color: $light;
+    border-radius: 50%;
+  }
+
+  &__arrow{
+    transition-duration: 0.2s;
+    transition-property: transform;
+    &--active {
+    
+      transform: rotate(-180deg);
+    }
+  }
+  // контейнер для выпадающего меню
+  &__sublinks {
+    background-color: $light;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 5px 0px;
+    position: absolute;
+    width: 150px;
+    border-radius: 10px;
+
+    // плавность появления (top отвечает за плавное появлени сверху)
+    transition: all 150ms ease-in-out;
+
+    // скрыть меню
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    left: -100px;
+    top: 100%;
+
+    // @media (max-width: 867px) {
+    //   width: 150px;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    // }
+  
+    // маленький квадратик
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: $light;
+      top: -5px;
+      // left: 17px;
+      left: 115px;
+      transform: rotate(45deg);
+    }
+
+    // класс добавляется контейнеру при клике на link (открыть меню)
+    &--active {
+      z-index: 2;
+      opacity: 1;
+      visibility: visible;
+
+      top: calc(100% + 10px);
+    }
+
+    // разделы в выпадающием меню
+    &-item {
+      user-select: none;
+
+      cursor: pointer;
+      padding: 7px 20px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #161b2d;
+
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        background-color: $blue-dark;
+        color: $light;
+      }
+    }
+  }
+}

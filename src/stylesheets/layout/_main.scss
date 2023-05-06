@@ -1,23 +1,23 @@
 // <ОСНОВНОЙ БЛОК>
 
 .main {
+  padding-top:  30px;
   grid-area: main;
-  position: relative;
-}
+  background-color: $blue-light;
 
-// оболочка над меню и основным контентом
-.container {
   display: grid;
-  grid-template: 1fr/ 4fr;
-  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 300px) minmax(10px, 1000px)  minmax(15px, 1fr);
-  margin-top: 60px;
-  @media (max-width: 867px) {
-    grid-template: auto 1fr / minmax(15px, 1fr)  minmax(10px, 1000px)  minmax(15px, 1fr);
-    
-  
-  }
-  // grid-template-areas: "nav content";
-  // position: relative;
-  // overflow: scroll;
+  grid-template: 1fr / minmax(15px, 1fr) minmax(10px, 1240px) minmax(15px, 1fr);
 
+  &__wrapper {
+    grid-area: 1/2;
+    @include f(space-between, flex-start, row);
+    gap: 10px;
+  }
+  @media (max-width: 867px) {
+    &__wrapper {
+      @include f(flex-start, flex-start, column);
+    }
+
+  }
 }
+
