@@ -8,11 +8,8 @@ function App() {
 
   return (
     <div className="wrapper">
-      {/* header */}
       <Header />
-      {/* main */}
       <Main />
-      {/* footer */}
       <Footer />
     </div>
   );
