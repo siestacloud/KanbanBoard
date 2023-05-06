@@ -1,0 +1,28 @@
+.issue {
+  @include f(flex-start, flex-start, column);
+
+  background-color: $light;
+  height: 100%;
+  position: relative;
+  color: $dark;
+  padding: 30px;
+  border-radius: 10px;
+  gap: 35px;
+  width: 100%;
+
+  &__head{
+    @include f(space-between, center, row);
+    width: 100%;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 31px;
+  }
+  &__desc{
+    height: 100%;
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+}

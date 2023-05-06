@@ -1,10 +1,10 @@
 /*полосa прокрутки для всей страницы*/
 ::-webkit-scrollbar {
     width: 5px;
-    background-color: #3d3d3d;
+    background-color: #ffffff;
 
     &-thumb {
-        background-color: #5f5f5f;
+        background-color: #acacac;
         border-radius: 50px;
     }
     &-track {

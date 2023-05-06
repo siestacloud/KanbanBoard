@@ -21,9 +21,8 @@ function DropDownMenu() {
         <img className={`dropdown__arrow ${MenuState ? 'dropdown__arrow--active' : ''}`} src={arrow} alt="" />
       </div>
       <div className={`dropdown__sublinks ${MenuState ? 'dropdown__sublinks--active' : ''}`}>
-        <span className="dropdown__sublinks-item">Первый элемент</span>
-        <span className="dropdown__sublinks-item">Второй элемент</span>
-        <span className="dropdown__sublinks-item">Третий элемент</span>
+        <span className="dropdown__sublinks-item">Profile</span>
+        <span className="dropdown__sublinks-item">Log out</span>
       </div>
     </div>
 

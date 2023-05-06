@@ -7,11 +7,11 @@ import './App.scss';
 function App() {
 
   return (
-    <div className="wrapper">
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+      <div className="wrapper">
+        <Header />
+        <Main />
+        <Footer />
+      </div>
   );
 }
 

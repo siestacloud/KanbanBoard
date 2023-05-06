@@ -10,10 +10,45 @@ export interface IIssue {
 }
 
 export interface IBoard {
+  show: boolean,
   title: string;
   issues: IIssue[];
 }
 
+
+
+
 export const DEF_APP_STATE: AppState = {
-  Boards: [],
+  Boards: [
+    {
+      show: false,
+      title: "Backlog",
+      issues: [
+
+      ]
+    },
+    {
+      show: false,
+
+      title: "Ready",
+      issues: [
+ 
+      ]
+    },
+    {
+      show: false,
+
+      title: "In Progress",
+      issues: [
+   
+      ]
+    },
+    {
+      show: false,
+      title: "Finished",
+      issues: [
+  
+      ]
+    }
+  ],
 }

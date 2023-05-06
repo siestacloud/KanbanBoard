@@ -1,31 +1,33 @@
-.card {
+.board {
   width: 300px;
+  height: 100%;
   color: $dark;
-
   @media (max-width: 867px) {
     width: 100%;
   }
-
+  
   &__body {
     @include f(space-between, flex-start, column);
-
+    
     padding: 10px 20px 5px 20px;
     background-color: $grey-light;
     border-radius: 10px;
     text-align: start;
-
   }
 
   &__title {
     font-size: 20px;
     font-weight: 400;
     line-height: 31px;
-    padding-bottom: 5px
+    padding-bottom: 5px;
   }
 
   &__list {
     @include f(center, center, column);
     width: 100%;
+    overflow: auto;
+    max-height: 60vh;
+
     &-task {
       width: 100%;
       border-radius: 7px;
@@ -34,27 +36,11 @@
       padding: 10px;
       margin-bottom: 5px;
     }
+
   }
 
-  &__add {
-    color: #a8a8a8;
-    text-align: start;
-    padding: 10px 0px;
-    font-size: 15px;
-  }
 
-  &__task {
-    font-size: 12px;
-    color: #c9cafd;
-    display: flex;
-    align-items: center;
 
-    // justify-content: center;
-    @media (max-width: 867px) {
-      justify-content: center;
-    }
 
-    gap: 4px;
-    flex-wrap: wrap;
-  }
+
 }

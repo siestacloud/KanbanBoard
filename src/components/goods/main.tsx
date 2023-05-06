@@ -1,14 +1,38 @@
 import React from 'react';
-import { Card } from '../common/card/card';
+import { Board } from '../common/board/board';
+import { useAppState } from '../../hooks/appHook';
+import { Routes, Route } from 'react-router-dom';
+import { Issue } from '../common/issue/issue';
 
 function Main() {
+
+  let { AppState } = useAppState()
   return (
     <main className='main'>
       <div className='main__wrapper'>
-      <Card></Card>
-      <Card></Card>
-        <Card></Card>
-        <Card></Card>
+
+
+        <Routes>
+          <Route path="/" element={
+            AppState.Boards.map((board, i) =>
+              <Board
+                key={i}
+                {...board}
+              />
+            )
+          } />
+          {
+            AppState.Boards.map((board, i) =>
+              board.issues.map((issue, i) =>
+                <Route path={`/issue/${issue.id}`} element={<Issue {...issue}></Issue>} />
+              )
+            )
+          }
+
+
+        </Routes>
+
+
       </div>
 
     </main>

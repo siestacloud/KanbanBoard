@@ -1,0 +1,94 @@
+.submenu {
+  width: 100%;
+
+
+  position: relative;
+
+  &__wrapper {
+    // margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: #fff;
+    position: absolute;
+
+    // плавность появления (top отвечает за плавное появлени сверху)
+    // transition: all 150ms ease-in-out;
+    // скрыть меню
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    left: 0;
+
+
+    // класс добавляется контейнеру при клике на link (открыть меню)
+    &--active {
+      z-index: 2;
+      opacity: 1;
+      visibility: visible;
+
+      top: calc(100% + 0px);
+    }
+
+  }
+
+  &__choose {
+    margin-bottom: 5px;
+    border-radius: 7px;
+    font-weight: 600;
+    background-color: #fff;
+    padding: 10px;
+    bottom: 100%;
+    display: none;
+    color: #a8a8a8;
+
+    &--active{
+      display: block;
+    }
+  }
+
+  &__items {
+    overflow: auto;
+    max-height: 150px;
+  }
+
+  &__item {
+    margin-bottom: 5px;
+    padding: 9px;
+    border-radius: 7px;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $grey-light;
+    }
+    &:last-child {
+      margin-bottom: 0px;
+
+    }
+  }
+  &__show {
+    cursor: default;
+
+    color: #a8a8a8;
+    text-align: start;
+    padding: 10px 0px;
+    font-size: 15px;
+    // transition: all 150ms ease-in-out;
+
+    &--hidden {
+      // opacity: 0;
+      // visibility: hidden;
+      display: none;
+    }
+    &--active{
+    cursor: pointer;
+
+    &:hover{
+      color: $dark;
+    }
+    }
+
+  }
+}

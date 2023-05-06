@@ -2,6 +2,8 @@
 
 .main {
   padding-top:  30px;
+  padding-bottom:  30px;
+
   grid-area: main;
   background-color: $blue-light;
 
@@ -17,7 +19,6 @@
     &__wrapper {
       @include f(flex-start, flex-start, column);
     }
-
   }
 }
 
