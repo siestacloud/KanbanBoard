@@ -1,18 +1,15 @@
-import React from 'react';
 import { useAppState } from '../../hooks/appHook';
 
 function Footer() {
-  const { AppState } = useAppState() //* добавление новых issue в state приложения
+  const { AppState } = useAppState() 
 
-  const ActiveIssuesSum = ():number => {
+  const ActiveIssuesSum = (): number => {
     let sum: number = 0
-    AppState.Boards.map((board, i) => {
-
-      if (board.title != "Finished") {
-        sum += board.issues.length
+    for (let i = 0; i < AppState.Boards.length; i++) {
+      if (AppState.Boards[i].title !== "Finished") {
+        sum += AppState.Boards[i].issues.length
       }
     }
-    )
     return sum
   }
 

@@ -1,16 +1,11 @@
-import { useState } from "react";
-import { IBoard, IIssue } from "../../../models/stateApp";
+import { IIssue } from "../../../models/stateApp";
 import { useAppState } from "../../../hooks/appHook";
-import { v4 as uuidv4 } from 'uuid';
 import { Link } from 'react-router-dom';
 
+// Issue окно редактирования отдельной issue
 export function Issue({ description, id, name }: IIssue) {
 
-  // const [newIssueDesc, setNewIssueDesc] = useState(""); //* захват данных с поля ввода
-
-  let { SetIssueDescription } = useAppState() //* добавление новых issue в state приложения
-
-
+  let { SetIssueDescription } = useAppState() //* добавление описания к issue в state приложения
 
   return (
     <article className="issue">
@@ -20,7 +15,7 @@ export function Issue({ description, id, name }: IIssue) {
       </div>
       <textarea
         value={description}
-        onChange={event => SetIssueDescription(id, event.target.value)}
+        onChange={event => SetIssueDescription(id, event.target.value)} //* каждый ввод пользователя сохраняется в state приложения
         className="issue__desc"
         placeholder={description ? description : "This task has no description"} />
     </article>

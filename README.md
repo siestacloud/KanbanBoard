@@ -33,7 +33,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 ## 😉 Check result <a name = "Check result"></a>
-Итоговая реализация проекта доступна по ссылке <https://kanban.siestacloud.ru/>
+Итоговая реализация проекта доступна по ссылке 
 ## 🧐 About <a name = "about"></a>
 
 Проект выполнен в рамках технического задания модуля React
@@ -45,6 +45,7 @@
 ###  Installing
 ```
 git clone  https://gitlab.com/infrastructures/panorama/workflow-k8s/client-workflow/kanban-board.git
+cd kanban-board/
 ```
 `npm`
 ```

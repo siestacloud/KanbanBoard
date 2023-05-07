@@ -1,11 +1,8 @@
 .submenu {
   width: 100%;
-
-
   position: relative;
 
   &__wrapper {
-    // margin-top: 10px;
     width: 100%;
     padding: 10px;
 
@@ -14,9 +11,6 @@
     background-color: #fff;
     position: absolute;
 
-    // плавность появления (top отвечает за плавное появлени сверху)
-    // transition: all 150ms ease-in-out;
-    // скрыть меню
     z-index: -1;
     opacity: 0;
     visibility: hidden;
@@ -75,11 +69,8 @@
     text-align: start;
     padding: 10px 0px;
     font-size: 15px;
-    // transition: all 150ms ease-in-out;
 
     &--hidden {
-      // opacity: 0;
-      // visibility: hidden;
       display: none;
     }
     &--active{

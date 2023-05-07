@@ -1,16 +1,14 @@
-import React from 'react';
-import { Board } from '../common/board/board';
-import { useAppState } from '../../hooks/appHook';
 import { Routes, Route } from 'react-router-dom';
+import { Board } from '../common/board/board';
 import { Issue } from '../common/issue/issue';
+import { useAppState } from '../../hooks/appHook';
 
 function Main() {
-
   let { AppState } = useAppState()
+
   return (
     <main className='main'>
       <div className='main__wrapper'>
-
 
         <Routes>
           <Route path="/" element={
@@ -21,6 +19,7 @@ function Main() {
               />
             )
           } />
+
           {
             AppState.Boards.map((board, i) =>
               board.issues.map((issue, i) =>
@@ -29,10 +28,7 @@ function Main() {
             )
           }
 
-
         </Routes>
-
-
       </div>
 
     </main>

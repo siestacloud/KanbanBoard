@@ -1,10 +1,8 @@
 import React from 'react';
-
 import user from './assets/user-avatar.svg';
 import arrow from './assets/arrow.svg';
 
-
-
+// DropDownMenu отображение подменю в header
 function DropDownMenu() {
 
   const [MenuState, setMenuState] = React.useState(false)
@@ -12,9 +10,7 @@ function DropDownMenu() {
     setMenuState(!MenuState)
   }
 
-
   return (
-    //  2. Подсказкa слева 
     <div className="dropdown">
       <div className="dropdown__link" onClick={HandleEnableMenu} data-test="">
         <img className='dropdown__avatar' src={user} alt="" />
@@ -25,7 +21,6 @@ function DropDownMenu() {
         <span className="dropdown__sublinks-item">Log out</span>
       </div>
     </div>
-
   );
 }
 
