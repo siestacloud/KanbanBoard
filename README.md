@@ -44,21 +44,17 @@
 
 ###  Installing
 ```
-git clone  https://gitlab.com/infrastructures/panorama/workflow-k8s/client-workflow/weather/-/tree/main
-
+git clone  https://gitlab.com/infrastructures/panorama/workflow-k8s/client-workflow/kanban-board.git
+```
+`npm`
+```
 npm i
 npm run build
 npm run start
 ```
-
+`yarn`
+```
+yarn
+yarn run start
+```
 ---
-
-### расшифровка CICD secrets 
-
-
-```
-cat .helm/values-prod-encrypted.yaml | werf helm secret decrypt -o .helm/values-prod-decrypted.yaml
-cat .helm/values-prod-decrypted.yaml | werf helm secret encrypt -o .helm/values-prod-encrypted.yaml
-```
-
-
