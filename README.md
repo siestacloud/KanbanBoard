@@ -1,6 +1,3 @@
-
-
-
 <p align="center">
   <a href="" rel="noopener">
  <!-- <img width=100% height=700px src="./src/assets/img/preview.png" alt="Project logo"></a> -->
