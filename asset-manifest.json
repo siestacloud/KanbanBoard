@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/KanbanBoard/static/css/main.08406c8c.css",
-    "main.js": "/KanbanBoard/static/js/main.460f5466.js",
+    "main.js": "/KanbanBoard/static/js/main.4eb38a63.js",
     "static/media/Circe-Regular.eot": "/KanbanBoard/static/media/Circe-Regular.cb92908127bb9d67856e.eot",
     "static/media/Circe-Regular.ttf": "/KanbanBoard/static/media/Circe-Regular.f80cf2f1a50fc5107f4c.ttf",
     "static/media/Circe-Bold.eot": "/KanbanBoard/static/media/Circe-Bold.88073c2acd9bd5c499ea.eot",
@@ -18,10 +18,10 @@
     "index.html": "/KanbanBoard/index.html",
     "static/media/arrow.svg": "/KanbanBoard/static/media/arrow.499a81f7058420ec4c251b760054534d.svg",
     "main.08406c8c.css.map": "/KanbanBoard/static/css/main.08406c8c.css.map",
-    "main.460f5466.js.map": "/KanbanBoard/static/js/main.460f5466.js.map"
+    "main.4eb38a63.js.map": "/KanbanBoard/static/js/main.4eb38a63.js.map"
   },
   "entrypoints": [
     "static/css/main.08406c8c.css",
-    "static/js/main.460f5466.js"
+    "static/js/main.4eb38a63.js"
   ]
 }
