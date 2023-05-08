@@ -11,7 +11,7 @@ function Main() {
       <div className='main__wrapper'>
 
         <Routes>
-          <Route path="/*`" element={
+          <Route path="/*" element={
             AppState.Boards.map((board, i) =>
               <Board
                 key={i}
