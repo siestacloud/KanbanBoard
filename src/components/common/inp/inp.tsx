@@ -34,6 +34,7 @@ export function Input({ title, show }: IBoard) {
     <>
       <div className={`input__wrapper ${show ? 'input__wrapper--active' : ''}`}>
         <input
+          autoFocus={true}
           value={newIssueTitle}
           onChange={event => setNewIssueTitle(event.target.value)}
           type="text"
